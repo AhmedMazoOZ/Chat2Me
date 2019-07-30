@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/bar_layout"
+        />
+    <ImageView
+        android:id="@+id/logoo"
+        android:src="@drawable/logoo"
+        android:layout_below="@+id/app_bar"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true" />
+    <TextView
+        android:id="@+id/Head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoo"
+        android:layout_centerHorizontal="true"
+        android:text="Know new Friends"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp"
+        android:fontFamily="@font/font1"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Head"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="15dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="8dp">
+
+
+        <EditText
+            android:id="@+id/edemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/font1" />
+        <EditText
+            android:id="@+id/edPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/font1"/>
+
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/loginbu"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedgreenbutton"
+        android:text="Login"
+        android:fontFamily="@font/font1"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:onClick="Login"/>
+
+    <TextView
+        android:id="@+id/ForgetPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginbu"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/font1"
+        android:text="Forget your Password ?"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:onClick="ForgetPass"/>
+
+    <TextView
+        android:id="@+id/OR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ForgetPass"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/font1"
+        android:text="OR"
+        android:onClick="CreateAcc"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/redcolor"
+        android:textSize="10dp" />
+    <TextView
+        android:id="@+id/Sign_UP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/OR"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/font1"
+        android:text="SignUp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/redcolor"
+        android:textSize="15dp"
+        android:onClick="CreateAcc"/>
+
+    <ProgressBar
+        android:id="@+id/pBar"
+        android:layout_below="@+id/Sign_UP"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:theme="@style/AppTheme.WhiteAccent"
+        android:layout_height="wrap_content">
+    </ProgressBar>
+</RelativeLayout>

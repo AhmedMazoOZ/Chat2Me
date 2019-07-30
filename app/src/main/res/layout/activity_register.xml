@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/bar_layout"/>
+<ImageView
+    android:id="@+id/logoo"
+    android:src="@drawable/logoo"
+    android:layout_below="@+id/app_bar"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_centerInParent="true" />
+    <TextView
+        android:id="@+id/Head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoo"
+        android:layout_centerHorizontal="true"
+        android:text="Create New Account"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        android:fontFamily="@font/font1"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Head"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="15dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="8dp">
+
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="UserName"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/font1" />
+        <EditText
+            android:id="@+id/edemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:hint="Email"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/font1" />
+        <EditText
+            android:id="@+id/edPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/font1"/>
+        <EditText
+            android:id="@+id/edConPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/font1"/>
+    </androidx.cardview.widget.CardView>
+    <RadioGroup
+        android:id="@+id/RG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card"
+        android:checkedButton="@+id/Male"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layoutDirection="rtl"
+        android:textDirection="rtl"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/Male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/font1"
+            android:buttonTint="@color/colorPrimary"/>
+        <RadioButton
+            android:id="@+id/Femal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textSize="20dp"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/font1"
+            android:buttonTint="@color/colorPrimary"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/loginbu"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RG"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedgreenbutton"
+        android:text="Create account"
+        android:fontFamily="@font/font1"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:onClick="CreateAcc"/>
+
+    <TextView
+        android:id="@+id/CreateAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/loginbu"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/font1"
+        android:text="Have an account ?"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:onClick="Login"/>
+
+    <ProgressBar
+        android:id="@+id/pBar"
+        android:layout_below="@+id/CreateAccount"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:theme="@style/AppTheme.WhiteAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </ProgressBar>
+</RelativeLayout>
